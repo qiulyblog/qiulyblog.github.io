@@ -227,8 +227,16 @@
   
     
   
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+  <!-- 雪花特效 -->
+  <script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+      document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+    }
+  </script>
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="\js\snow.js"></script>
   
@@ -1434,205 +1442,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://monlights.github.io/2019/03/26/[题解]luoguP2766/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qiuly">
-      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
-      <meta itemprop="image" content="/images/113190.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Qiuly's blog!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/26/[题解]luoguP2766/" class="post-title-link" itemprop="url">【题解】 「网络流24题」最长不下降子序列问题  网络流  luoguP2766</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-         
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-26T00:00:00+08:00">2019-03-26</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-29 13:54:13" itemprop="dateModified" datetime="2019-03-29T13:54:13+08:00">2019-03-29</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/26/[题解]luoguP2766/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/[题解]luoguP2766/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      <div>
-      
-        
-          <p>第一问显然是一个很简单的 $DP$ ，但是第二问和第三问就要用最大流来求了，怎么求呢？</p>
-<p>首先我们 $DP$ 出来的 $f$ 数组，$f[i]$ 表示<strong>以i结尾的最长不下降子序列的长度</strong> ，然后就是网络流的连边了。首先因为一个点只能经过两次，我们需要将其拆为入点和出点，中间连的边的边权自然是 $1$ ，然后对于一个 $i$ ，如果 $f[i]$ 等于最长长度($s$)，那么很显然这个 $i$ 就可以给答案做出一个贡献，这个时候 $i$ 的出点向 $t$ 连一条边权为 $1$ 边。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/26/[题解]luoguP2766/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </div></article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://monlights.github.io/2019/03/26/[算法]KD-Tree/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1832,7 +1641,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://monlights.github.io/2019/03/24/[题解]luoguP2805/">
+    <link itemprop="mainEntityOfPage" href="http://monlights.github.io/2019/03/26/[题解]luoguP2766/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1852,7 +1661,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/24/[题解]luoguP2805/" class="post-title-link" itemprop="url">【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805</a>
+                <a href="/2019/03/26/[题解]luoguP2766/" class="post-title-link" itemprop="url">【题解】 「网络流24题」最长不下降子序列问题  网络流  luoguP2766</a>
               
             
           </h1>
@@ -1878,7 +1687,7 @@
                 
               
 
-              <time title="Created: 2019-03-24 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-24T00:00:00+08:00">2019-03-24</time>
+              <time title="Created: 2019-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-26T00:00:00+08:00">2019-03-26</time>
             
 
             
@@ -1895,7 +1704,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-25 16:13:42" itemprop="dateModified" datetime="2019-03-25T16:13:42+08:00">2019-03-25</time>
+                <time title="Modified: 2019-03-29 13:54:13" itemprop="dateModified" datetime="2019-03-29T13:54:13+08:00">2019-03-29</time>
               
             
           </span>
@@ -1931,8 +1740,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/24/[题解]luoguP2805/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/24/[题解]luoguP2805/" itemprop="commentCount"></span>
+                <a href="/2019/03/26/[题解]luoguP2766/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/[题解]luoguP2766/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1962,11 +1771,12 @@
       <div>
       
         
-          <h4 id="前置芝士：网络流-最大权闭合子图"><a href="#前置芝士：网络流-最大权闭合子图" class="headerlink" title="前置芝士：网络流-最大权闭合子图"></a>前置芝士：网络流-最大权闭合子图</h4><p>定义：对于一个图的子图，当且仅当这个子图中的任意一点都不会与该子图外的点联通时，称这个子图为该图的闭合子图。在该图所有的闭合子图中，点权和最大的那个我们称作<strong>最大权闭合子图</strong>。</p>
+          <p>第一问显然是一个很简单的 $DP$ ，但是第二问和第三问就要用最大流来求了，怎么求呢？</p>
+<p>首先我们 $DP$ 出来的 $f$ 数组，$f[i]$ 表示<strong>以i结尾的最长不下降子序列的长度</strong> ，然后就是网络流的连边了。首先因为一个点只能经过两次，我们需要将其拆为入点和出点，中间连的边的边权自然是 $1$ ，然后对于一个 $i$ ，如果 $f[i]$ 等于最长长度($s$)，那么很显然这个 $i$ 就可以给答案做出一个贡献，这个时候 $i$ 的出点向 $t$ 连一条边权为 $1$ 边。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/24/[题解]luoguP2805/#more" rel="contents">
+              <a class="btn" href="/2019/03/26/[题解]luoguP2766/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2167,6 +1977,204 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/03/24/[题解]luoguP2569/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </div></article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://monlights.github.io/2019/03/24/[题解]luoguP2805/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiuly">
+      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
+      <meta itemprop="image" content="/images/113190.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qiuly's blog!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/24/[题解]luoguP2805/" class="post-title-link" itemprop="url">【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+         
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-24 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-24T00:00:00+08:00">2019-03-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-25 16:13:42" itemprop="dateModified" datetime="2019-03-25T16:13:42+08:00">2019-03-25</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/03/24/[题解]luoguP2805/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/24/[题解]luoguP2805/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      <div>
+      
+        
+          <h4 id="前置芝士：网络流-最大权闭合子图"><a href="#前置芝士：网络流-最大权闭合子图" class="headerlink" title="前置芝士：网络流-最大权闭合子图"></a>前置芝士：网络流-最大权闭合子图</h4><p>定义：对于一个图的子图，当且仅当这个子图中的任意一点都不会与该子图外的点联通时，称这个子图为该图的闭合子图。在该图所有的闭合子图中，点权和最大的那个我们称作<strong>最大权闭合子图</strong>。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/24/[题解]luoguP2805/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2739,6 +2747,13 @@
     
 
     
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ca6aa8d8fec2278" async="async"></script>
+</div>
+
+      </div>
+    
   </div>
 
   
@@ -3244,7 +3259,24 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style>
+</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
     
   
@@ -3270,22 +3302,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

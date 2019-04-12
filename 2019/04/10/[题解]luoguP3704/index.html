@@ -159,7 +159,7 @@
 <meta property="og:site_name" content="Qiuly&#39;s blog!">
 <meta property="og:description" content="我们设 $n \leq m​$ ，然后开始推式子，我们将 $gcd(i,j)​$ 的值作为 “$d​$” 提出来： \prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]=\prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]=\prod_{d=1}^">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-10T07:23:18.531Z">
+<meta property="og:updated_time" content="2019-04-10T14:10:32.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】[SDOI2017]数字表格  莫比乌斯反演  luoguP3704">
 <meta name="twitter:description" content="我们设 $n \leq m​$ ，然后开始推式子，我们将 $gcd(i,j)​$ 的值作为 “$d​$” 提出来： \prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]=\prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]=\prod_{d=1}^">
@@ -503,7 +503,7 @@
                 
               
 
-              <time title="Created: 2019-04-10 00:00:00 / Modified: 15:23:18" itemprop="dateCreated datePublished" datetime="2019-04-10T00:00:00+08:00">2019-04-10</time>
+              <time title="Created: 2019-04-10 00:00:00 / Modified: 22:10:32" itemprop="dateCreated datePublished" datetime="2019-04-10T00:00:00+08:00">2019-04-10</time>
             
 
             
@@ -576,7 +576,7 @@
       
         <p>我们设 $n \leq m​$ ，然后开始推式子，我们将 $gcd(i,j)​$ 的值作为 “$d​$” 提出来：</p>
 <script type="math/tex; mode=display">\prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]</script><script type="math/tex; mode=display">=\prod_{d=1}^{n}\prod_{i=1}^{n}\prod_{j=1}^{m}if(gcd(i,j)=d) f[d]</script><script type="math/tex; mode=display">=\prod_{d=1}^{n}\prod_{i=1}^{ \lfloor\frac{n}{d}\rfloor }\prod_{j=1}^{ \lfloor\frac{m}{d}\rfloor }if(gcd(i,j)=1) f[d]</script><script type="math/tex; mode=display">=\prod_{d=1}^{n} f[d]^{\sum_{i=1}^{ \lfloor\frac{n}{d}\rfloor }\sum_{j=1}^{\lfloor\frac{m}{d}\rfloor}[gcd(i,j)=1]}</script><a id="more"></a>
-<p>$\sum_{i=1}^{\lfloor\frac{n}{d}\rfloor }\sum_{j=1}^{\lfloor\frac{m}{d}\rfloor}[gcd(i,j)=1]$ 是个熟悉的式子，我们从这个式子继续开刀：</p>
+<p>$\sum_{i=1}^{\lfloor\frac{n}{d}\rfloor }\sum_{j=1}^{\lfloor\frac{m}{d}\rfloor}[gcd(i,j)=1]​$ 是个熟悉的式子，我们从这个式子继续开刀：</p>
 <script type="math/tex; mode=display">\sum_{i=1}^{ \lfloor\frac{n}{d}\rfloor }\sum_{j=1}^{ \lfloor\frac{m}{d}\rfloor }[gcd(i,j)=1]​</script><script type="math/tex; mode=display">=\sum_{i=1}^{ \lfloor\frac{n}{d}\rfloor }\sum_{j=1}^{ \lfloor\frac{m}{d}\rfloor }\sum_{x|gcd(i,j)} \mu(x)​</script><script type="math/tex; mode=display">=\sum_{x=1}^{n}\mu(x)\lfloor\frac{n}{dx}\rfloor\lfloor\frac{m}{dx}\rfloor​</script><p>于是原来的式子变成了：</p>
 <script type="math/tex; mode=display">\prod_{d=1}^{n} f[d]^{\sum_{x=1}^{n}\mu(x)\lfloor\frac{n}{dx}\rfloor\lfloor\frac{m}{dx}\rfloor}​</script><p>设 $T=dx$ ，并将 $T$ 提出来枚举：</p>
 <script type="math/tex; mode=display">\prod_{d=1}^{n} f[d]^{\sum_{x=1}^{n}\mu(x)\lfloor\frac{n}{dx}\rfloor\lfloor\frac{m}{dx}\rfloor}​</script><script type="math/tex; mode=display">=\prod_{T=1}^{n}\prod_{d|T} f[d]^{\mu( \lfloor\frac{T}{d}\rfloor )\lfloor\frac{n}{T}\rfloor\lfloor\frac{m}{T}\rfloor}</script><script type="math/tex; mode=display">=\prod_{T=1}^{n}(\prod_{d|T} f[d]^{\mu( \lfloor\frac{T}{d}\rfloor )})^{\lfloor\frac{n}{T}{\rfloor\lfloor\frac{m}{T}\rfloor}}</script><p>这个样子多好啊，我们可以将可爱的 $(\prod_{d|T} f[d]^{\mu( \lfloor\frac{T}{d}\rfloor )})$ 预处理，也就是枚举每一个 $d$ ，然后将可以整除 $d$ 的每一个 $T$ 都算上 $d$ 带来的贡献即可。最后的时候可以整除分块。最终的时间复杂度为 $O(\sqrt{n})$ ，当然不算上预处理时候的复杂度，如果加上预处理的复杂度，最终的复杂度应该为 $O(N(log\ N+log\ mod)+T(\sqrt{n} \  log\ mod))$ ，$log\ mod$ 就是算逆元的复杂度。</p>
@@ -603,7 +603,7 @@
   <p><span>本文标题:</span><a href="/2019/04/10/[题解]luoguP3704/">【题解】[SDOI2017]数字表格  莫比乌斯反演  luoguP3704</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiuly 的个人博客">Qiuly</a></p>
   <p><span>发布时间:</span>2019年04月10日 - 00:00</p>
-  <p><span>最后更新:</span>2019年04月10日 - 15:23</p>
+  <p><span>最后更新:</span>2019年04月10日 - 22:10</p>
   <p><span>原始链接:</span><a href="/2019/04/10/[题解]luoguP3704/" title="【题解】[SDOI2017]数字表格  莫比乌斯反演  luoguP3704">http://monlights.github.io/2019/04/10/[题解]luoguP3704/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://monlights.github.io/2019/04/10/[题解]luoguP3704/" aria-label="复制成功！"></i></span>
   </p>
@@ -658,8 +658,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/10/[题解]luoguP2408/" rel="next" title="【题解】 不同子串个数  后缀数组.SA  luoguP2408">
-                <i class="fa fa-chevron-left"></i> 【题解】 不同子串个数  后缀数组.SA  luoguP2408
+              <a href="/2019/04/08/[游记]HNOI2019/" rel="next" title="【游记】  HNOI2019酱油记">
+                <i class="fa fa-chevron-left"></i> 【游记】  HNOI2019酱油记
               </a>
             
           </div>
@@ -667,6 +667,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/10/[题解]luoguP2408/" rel="prev" title="【题解】 不同子串个数  后缀数组.SA  luoguP2408">
+                【题解】 不同子串个数  后缀数组.SA  luoguP2408 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -744,7 +748,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -872,7 +876,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">49</span>
+                      
+                    
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1016,7 +1022,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共92.6k字</span>
+  <span class="post-count">博客全站共95.2k字</span>
 </div>
         
 
@@ -1072,7 +1078,7 @@
     
     
   
-  <script color="255,0,255" opacity="1" zindex="-1" count="180" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script color="255,0,255" opacity="1" zindex="-1" count="80" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 

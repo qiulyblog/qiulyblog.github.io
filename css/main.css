@@ -1951,7 +1951,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa2ff;
+  background: #b546ad;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3113,7 +3113,7 @@ header.post-header {
   }
 }
 body {
-  background: url("https://i.loli.net/2019/04/10/5cad9fc7a575b.jpg");
+  background: url("https://i.loli.net/2019/04/18/5cb7d70884f3d.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 100% 100%;
@@ -3126,11 +3126,25 @@ body {
   min-height: 0px;
 }
 .site-meta {
-  background: #7116e6;
+  background: #e06dbc;
 }
 .headband {
-  height: 4px;
-  background: #7116e6;
+  height: 5px;
+  background: #e06dbc;
+}
+blockquote {
+  padding: 0 13px;
+  color: #666;
+  border-left: 4px solid #00f7ff;
+}
+.header-inner {
+  box-shadow: 0 0 18px #e06dbc;
+}
+.content-wrap {
+  box-shadow: 0 0 12px #e06dbc;
+}
+.sidebar-inner {
+  box-shadow: 0 0 12px #e06dbc;
 }
 element.style {
   border-bottom: 1px solid #fff;

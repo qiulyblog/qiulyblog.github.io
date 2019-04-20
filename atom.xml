@@ -5,9 +5,9 @@
   <subtitle>A weak OIer from HN-YZ</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://monlights.github.io/"/>
-  <updated>2019-04-20T08:53:01.104Z</updated>
-  <id>http://monlights.github.io/</id>
+  <link href="http://qiulyblog.github.io/"/>
+  <updated>2019-04-20T09:04:38.258Z</updated>
+  <id>http://qiulyblog.github.io/</id>
   
   <author>
     <name>Qiuly</name>
@@ -18,27 +18,27 @@
   
   <entry>
     <title>公告</title>
-    <link href="http://monlights.github.io/2019/04/20/%E5%85%AC%E5%91%8A/"/>
-    <id>http://monlights.github.io/2019/04/20/公告/</id>
+    <link href="http://qiulyblog.github.io/2019/04/20/%E5%85%AC%E5%91%8A/"/>
+    <id>http://qiulyblog.github.io/2019/04/20/公告/</id>
     <published>2019-04-19T16:00:00.000Z</published>
-    <updated>2019-04-20T08:53:01.104Z</updated>
+    <updated>2019-04-20T09:04:38.258Z</updated>
     
-    <content type="html"><![CDATA[<p>S由于本站建立的初衷是让 $Qiuly$ 有个私人博客，也就是一个小窝。但是最近因为不明原因本站陆陆续续被很多人发现，这显然违背的建立博客的初衷。所以 $Qiuly$ 决定销毁此博客，也就是弃坑</p><p>也就是说以后的日子，$monlights.github.io$ 永远只剩下这一篇文章了。或者，$monlights.github.io$ 这个网址将会永远不存在。</p><p>再见。</p>]]></content>
+    <content type="html"><![CDATA[<p>由于本站建立的初衷是让 $Qiuly$ 有个私人博客，也就是一个小窝。但是最近因为不明原因本站陆陆续续被很多人发现，这显然违背的建立博客的初衷。所以 $Qiuly$ 决定销毁此博客，也就是弃坑</p><p>也就是说以后的日子，$monlights.github.io$ 永远只剩下这一篇文章了。或者，$monlights.github.io$ 这个网址将会永远不存在。</p><p>再见。</p><p>(到时候想要个typecho呢)</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;S由于本站建立的初衷是让 $Qiuly$ 有个私人博客，也就是一个小窝。但是最近因为不明原因本站陆陆续续被很多人发现，这显然违背的建立博客的初衷。所以 $Qiuly$ 决定销毁此博客，也就是弃坑&lt;/p&gt;
-&lt;p&gt;也就是说以后的日子，$monlights.github.io$ 
+        &lt;p&gt;由于本站建立的初衷是让 $Qiuly$ 有个私人博客，也就是一个小窝。但是最近因为不明原因本站陆陆续续被很多人发现，这显然违背的建立博客的初衷。所以 $Qiuly$ 决定销毁此博客，也就是弃坑&lt;/p&gt;
+&lt;p&gt;也就是说以后的日子，$monlights.github.io$ 永
       
     
     </summary>
     
-      <category term="OI" scheme="http://monlights.github.io/categories/OI/"/>
+      <category term="OI" scheme="http://qiulyblog.github.io/categories/OI/"/>
     
     
-      <category term="公告" scheme="http://monlights.github.io/tags/%E5%85%AC%E5%91%8A/"/>
+      <category term="公告" scheme="http://qiulyblog.github.io/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   

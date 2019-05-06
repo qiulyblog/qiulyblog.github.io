@@ -1951,7 +1951,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0077e4;
+  background: #eb2652;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3113,7 +3113,7 @@ header.post-header {
   }
 }
 body {
-  background: url("https://i.loli.net/2019/04/18/5cb7d70884f3d.jpg");
+  background: url("https://www.mina.moe/wp-content/uploads/2019/05/wallhaven-546507.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 100% 100%;
@@ -3126,25 +3126,31 @@ body {
   min-height: 0px;
 }
 .site-meta {
-  background: #e06dbc;
+  background: #14c39c;
 }
 .headband {
   height: 5px;
-  background: #e06dbc;
+  background: #14c39c;
 }
 blockquote {
   padding: 0 13px;
   color: #666;
   border-left: 4px solid #0cbaea;
 }
+#days {
+  display: block;
+  color: #07b39b;
+  font-size: 13px;
+  margin-top: 15px;
+}
 .header-inner {
-  box-shadow: 0 0 18px #e06dbc;
+  box-shadow: 0 0 4px #14c39c;
 }
 .content-wrap {
-  box-shadow: 0 0 12px #e06dbc;
+  box-shadow: 0 0 10px #14c39c;
 }
 .sidebar-inner {
-  box-shadow: 0 0 12px #e06dbc;
+  box-shadow: 0 0 4px #14c39c;
 }
 element.style {
   border-bottom: 1px solid #fff;
@@ -3172,8 +3178,4 @@ element.style {
   margin: 0 auto 17px;
   padding: 2px;
   border: 1px solid #d2d2d2;
-}
-.site-title {
-  font-size: 21px;
-  font-family: "Segoe Print";
 }

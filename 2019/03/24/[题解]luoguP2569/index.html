@@ -49,16 +49,6 @@
         border-left-color: #1E92FB;    /*左边框颜色*/
     }
 </style>
-<script>
-    (function(){
-        if(''){
-            if (prompt('Please enter the article password (请输入本文的阅读密码)') !== ''){
-                alert('wrong password! (密码错误！)');
-                history.back();
-            }
-        }
-    })();
-</script>
 <meta name="theme-color" content="#890098">
 
 
@@ -152,7 +142,7 @@
 
 
   <meta name="description" content="我们一起来推一推。 设 $f[i][j]$ 表示：现在是第 $i$ 天，手上拥有的股票数为 $j$ 时赚到的最多的钱  我们考虑转移几个方向：空手买，不买不卖，之前买过了现在继续买，买过后需要卖">
-<meta name="keywords" content="题解,DP,单调队列">
+<meta name="keywords" content="DP,题解,单调队列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【题解】 [SCOI2010]股票交易  单调队列优化DP  luoguP2569">
 <meta property="og:url" content="http://qiulyblog.github.io/2019/03/24/[题解]luoguP2569/index.html">
@@ -311,6 +301,23 @@
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-daily">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/daily/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>daily</a>
 
   </li>
         
@@ -647,13 +654,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题解/" rel="tag"><i class="fa fa-tag"></i>
-
- 题解</a>
-          
             <a href="/tags/DP/" rel="tag"><i class="fa fa-tag"></i>
 
  DP</a>
+          
+            <a href="/tags/题解/" rel="tag"><i class="fa fa-tag"></i>
+
+ 题解</a>
           
             <a href="/tags/单调队列/" rel="tag"><i class="fa fa-tag"></i>
 
@@ -670,8 +677,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/21/[题解]bzoj4828/" rel="next" title="【题解】 [AH2017/HNOI2017]大佬  搜索+DP  luoguP3724/bzoj4828">
-                <i class="fa fa-chevron-left"></i> 【题解】 [AH2017/HNOI2017]大佬  搜索+DP  luoguP3724/bzoj4828
+              <a href="/2019/03/24/[题解]luoguP2805/" rel="next" title="【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805">
+                <i class="fa fa-chevron-left"></i> 【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805
               </a>
             
           </div>
@@ -680,8 +687,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/24/[题解]luoguP2805/" rel="prev" title="【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805">
-                【题解】 [NOI2009]植物大战僵尸  网络流  luoguP2805 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/26/[题解]luoguP2766/" rel="prev" title="【题解】 「网络流24题」最长不下降子序列问题  网络流  luoguP2766">
+                【题解】 「网络流24题」最长不下降子序列问题  网络流  luoguP2766 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -760,7 +767,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-count">95</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -900,7 +907,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">55</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1044,7 +1063,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.3k字</span>
+  <span class="post-count">博客全站共112.3k字</span>
 </div>
         
 
@@ -1601,24 +1620,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   
@@ -1644,5 +1646,22 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>

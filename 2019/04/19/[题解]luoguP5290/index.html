@@ -49,16 +49,6 @@
         border-left-color: #1E92FB;    /*左边框颜色*/
     }
 </style>
-<script>
-    (function(){
-        if(''){
-            if (prompt('Please enter the article password (请输入本文的阅读密码)') !== ''){
-                alert('wrong password! (密码错误！)');
-                history.back();
-            }
-        }
-    })();
-</script>
 <meta name="theme-color" content="#890098">
 
 
@@ -159,7 +149,7 @@
 <meta property="og:site_name" content="Qiuly&#39;s blog!">
 <meta property="og:description" content="要是我不是 $\texttt{HN}$ 的该多好，今年十二省联考两道傻逼题，一道异或粽子，一道十二响…… [十二省联考2019]春节十二响，启发式合并裸题。对于树中的一个节点 $u$ ，从其子树中选择一段的方式显然只能是从 $u$ 的所有子树中各选出一个节点。于是我们每一个节点开一个堆，存的就是其子树中(包括自己)的所有段的内存。 然后从下往上启发式合并即可，复杂度大约是 $O(nlogn)$ 。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-25T08:22:44.985Z">
+<meta property="og:updated_time" content="2019-04-19T11:41:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】 [十二省联考2019]春节十二响  堆+启发式合并  luoguP5290">
 <meta name="twitter:description" content="要是我不是 $\texttt{HN}$ 的该多好，今年十二省联考两道傻逼题，一道异或粽子，一道十二响…… [十二省联考2019]春节十二响，启发式合并裸题。对于树中的一个节点 $u$ ，从其子树中选择一段的方式显然只能是从 $u$ 的所有子树中各选出一个节点。于是我们每一个节点开一个堆，存的就是其子树中(包括自己)的所有段的内存。 然后从下往上启发式合并即可，复杂度大约是 $O(nlogn)$ 。">
@@ -311,6 +301,23 @@
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-daily">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/daily/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>daily</a>
 
   </li>
         
@@ -503,24 +510,12 @@
                 
               
 
-              <time title="Created: 2019-04-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-19T00:00:00+08:00">2019-04-19</time>
+              <time title="Created: 2019-04-19 00:00:00 / Modified: 19:41:32" itemprop="dateCreated datePublished" datetime="2019-04-19T00:00:00+08:00">2019-04-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-25 16:22:44" itemprop="dateModified" datetime="2019-04-25T16:22:44+08:00">2019-04-25</time>
               
             
           </span>
@@ -594,6 +589,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(q[x].size()&lt;q[y].size()) swap(q[x],q[y]);</span><br><span class="line">    <span class="keyword">while</span>(!q[y].empty()) &#123;</span><br><span class="line">        hep.push_back(max(q[x].top(),q[y].top()));</span><br><span class="line">        q[x].pop(),q[y].pop();</span><br><span class="line">        <span class="comment">/*贪心选取*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(hep.size()) q[x].push(hep.back()),hep.pop_back();</span><br><span class="line">    <span class="comment">/*更新节点*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,sz=G[x].size();i&lt;sz;++i)</span><br><span class="line">        solve(G[x][i]),merge(x,G[x][i]);<span class="comment">/*将当前子树与之前枚举过的子树合并*/</span></span><br><span class="line">    q[x].push(s[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>最后的总代码长度不超过 $40$ 行。</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">2e5</span>+<span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,f,s[N];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; hep,G[N];</span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>&gt; q[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(q[x].size()&lt;q[y].size()) swap(q[x],q[y]);</span><br><span class="line">    <span class="keyword">while</span>(!q[y].empty()) &#123;</span><br><span class="line">        hep.push_back(max(q[x].top(),q[y].top()));</span><br><span class="line">        q[x].pop(),q[y].pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(hep.size()) q[x].push(hep.back()),hep.pop_back();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,sz=G[x].size();i&lt;sz;++i)</span><br><span class="line">        solve(G[x][i]),merge(x,G[x][i]);</span><br><span class="line">    q[x].push(s[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;s[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;++i) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;f),G[f].push_back(i);</span><br><span class="line">    solve(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!q[<span class="number">1</span>].empty()) ans+=q[<span class="number">1</span>].top(),q[<span class="number">1</span>].pop();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -615,7 +611,7 @@
   <p><span>本文标题:</span><a href="/2019/04/19/[题解]luoguP5290/">【题解】 [十二省联考2019]春节十二响  堆+启发式合并  luoguP5290</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiuly 的个人博客">Qiuly</a></p>
   <p><span>发布时间:</span>2019年04月19日 - 00:00</p>
-  <p><span>最后更新:</span>2019年04月25日 - 16:22</p>
+  <p><span>最后更新:</span>2019年04月19日 - 19:41</p>
   <p><span>原始链接:</span><a href="/2019/04/19/[题解]luoguP5290/" title="【题解】 [十二省联考2019]春节十二响  堆+启发式合并  luoguP5290">http://qiulyblog.github.io/2019/04/19/[题解]luoguP5290/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://qiulyblog.github.io/2019/04/19/[题解]luoguP5290/" aria-label="复制成功！"></i></span>
   </p>
@@ -684,8 +680,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/19/[题解]luoguP5283/" rel="prev" title="【题解】 [十二省联考2019]异或粽子  可持久化Trie树  luoguP5283">
-                【题解】 [十二省联考2019]异或粽子  可持久化Trie树  luoguP5283 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/19/[题解]luoguP4751/" rel="prev" title="【题解】【模板】动态DP  LCT+DP+矩阵  luoguP4751">
+                【题解】【模板】动态DP  LCT+DP+矩阵  luoguP4751 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -764,7 +760,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-count">95</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -904,7 +900,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">55</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1048,7 +1056,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.3k字</span>
+  <span class="post-count">博客全站共112.3k字</span>
 </div>
         
 
@@ -1605,24 +1613,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   
@@ -1648,5 +1639,22 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>

@@ -49,16 +49,6 @@
         border-left-color: #1E92FB;    /*左边框颜色*/
     }
 </style>
-<script>
-    (function(){
-        if(''){
-            if (prompt('Please enter the article password (请输入本文的阅读密码)') !== ''){
-                alert('wrong password! (密码错误！)');
-                history.back();
-            }
-        }
-    })();
-</script>
 <meta name="theme-color" content="#890098">
 
 
@@ -317,6 +307,23 @@
         
         
           
+          <li class="menu-item menu-item-daily">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/daily/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>daily</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-tags">
 
     
@@ -459,7 +466,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/20/[题解]luoguP4425/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/31/[题解]luoguP2221/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -479,7 +486,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/20/[题解]luoguP4425/" class="post-title-link" itemprop="url">【题解】 [HNOI/AHOI2018]转盘  线段树  luoguP4425</a>
+                <a href="/2019/03/31/[题解]luoguP2221/" class="post-title-link" itemprop="url">【题解】 [HAOI2012]高速公路  线段树  luoguP2221</a>
               
             
           </h1>
@@ -505,24 +512,12 @@
                 
               
 
-              <time title="Created: 2019-03-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-20T00:00:00+08:00">2019-03-20</time>
+              <time title="Created: 2019-03-31 00:00:00 / Modified: 19:16:16" itemprop="dateCreated datePublished" datetime="2019-03-31T00:00:00+08:00">2019-03-31</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-29 13:55:18" itemprop="dateModified" datetime="2019-03-29T13:55:18+08:00">2019-03-29</time>
               
             
           </span>
@@ -558,8 +553,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/20/[题解]luoguP4425/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/20/[题解]luoguP4425/" itemprop="commentCount"></span>
+                <a href="/2019/03/31/[题解]luoguP2221/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/31/[题解]luoguP2221/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -589,13 +584,13 @@
       <div>
       
         
-          <p>首先再来讲明一下题意：</p>
-<p>给定一个长度为 $n$ 的环，环上的每个点有一个权值 $T_i$ ，要求你从环上选中任意一个点为起点开始，每个时间可以顺时钟到下一个点，或者停留不动。对于一个点，如果到这个点的时间大于等于了 $T_i$ ，那么这个点将被标记，问最少什么时候可以让所有物品都被标记。</p>
-<p>可以发现，这个问题的答案跟以下问题的答案是等价的：</p>
+          <p>$3$ 月份的最后一篇题解了呢……明天就属于 $4$ 月了，离省选不远了…$QwQ$…</p>
+<p>发现窝真的很制杖，我们先来聊聊刚开始窝的想法。</p>
+<p>我画了画图，然后发现，对于最后答案的分母(不是最简)，是这个序列中这些数的值(废话)，然后发现了每个点的出现次数，然后线段树维护求和。发现效率很低于是试图将出现次数般到二维平面上，然后曼哈顿距离转切比雪夫距离然后二维树状数组维护然后 $WA$ 了然后弃疗。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/20/[题解]luoguP4425/#more" rel="contents">
+              <a class="btn" href="/2019/03/31/[题解]luoguP2221/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -659,7 +654,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/20/[题解]luoguAT1219/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/31/[题解]luoguP2495/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -679,7 +674,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/20/[题解]luoguAT1219/" class="post-title-link" itemprop="url">【题解】 历史研究  回滚莫队  luoguAT1219</a>
+                <a href="/2019/03/31/[题解]luoguP2495/" class="post-title-link" itemprop="url">【题解】 [SDOI2011]消耗战  虚树+树形DP  luoguP2495</a>
               
             
           </h1>
@@ -705,7 +700,7 @@
                 
               
 
-              <time title="Created: 2019-03-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-20T00:00:00+08:00">2019-03-20</time>
+              <time title="Created: 2019-03-31 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-31T00:00:00+08:00">2019-03-31</time>
             
 
             
@@ -722,7 +717,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:52:30" itemprop="dateModified" datetime="2019-03-29T13:52:30+08:00">2019-03-29</time>
+                <time title="Modified: 2019-05-05 10:09:28" itemprop="dateModified" datetime="2019-05-05T10:09:28+08:00">2019-05-05</time>
               
             
           </span>
@@ -758,8 +753,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/20/[题解]luoguAT1219/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/20/[题解]luoguAT1219/" itemprop="commentCount"></span>
+                <a href="/2019/03/31/[题解]luoguP2495/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/31/[题解]luoguP2495/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -789,12 +784,13 @@
       <div>
       
         
-          <p>回滚莫队板子题，在此不再赘述。</p>
-<p>关于回滚莫队的文章戳这 $QwQ$ :<a href="https://monlights.github.io/2019/03/08/[算法]莫队&amp;树上莫队/" target="_blank" rel="noopener">[算法]浅谈4种莫队及例题</a></p>
+          <p>去 $Mina!$ 上了解了一波虚树，$\%\%\% XZY$ 学长太强辣！</p>
+<p>这次总算明白了些虚树，然后 $XZY$ 大佬的例题就是消耗战。</p>
+<p>于是看了过来。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/20/[题解]luoguAT1219/#more" rel="contents">
+              <a class="btn" href="/2019/03/31/[题解]luoguP2495/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -858,7 +854,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/15/[题解]bzoj4826/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/30/[题解]luoguP3157/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -878,7 +874,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/15/[题解]bzoj4826/" class="post-title-link" itemprop="url">【题解】 [AH2017/HNOI2017]影魔  线段树  luoguP3722/bzoj4826</a>
+                <a href="/2019/03/30/[题解]luoguP3157/" class="post-title-link" itemprop="url">【题解】  [CQOI2011]动态逆序对  CDQ分治  luoguP3157</a>
               
             
           </h1>
@@ -904,24 +900,12 @@
                 
               
 
-              <time title="Created: 2019-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-15T00:00:00+08:00">2019-03-15</time>
+              <time title="Created: 2019-03-30 00:00:00 / Modified: 15:37:46" itemprop="dateCreated datePublished" datetime="2019-03-30T00:00:00+08:00">2019-03-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-29 13:52:18" itemprop="dateModified" datetime="2019-03-29T13:52:18+08:00">2019-03-29</time>
               
             
           </span>
@@ -957,8 +941,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/15/[题解]bzoj4826/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/15/[题解]bzoj4826/" itemprop="commentCount"></span>
+                <a href="/2019/03/30/[题解]luoguP3157/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/30/[题解]luoguP3157/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -988,12 +972,12 @@
       <div>
       
         
-          <p>真心巧妙，不看题解准做不出<del>(之前题解都看不懂QwQ)</del></p>
-<p>这道题貌似有许多的做法，都不费，主席树的话不知道怎么搞，于是建了 $3$ 棵线段树，实测是不会炸的。</p>
+          <p>一个可爱的 $CDQ$ ，我们将原始序列看成一个一个加入，然后后面的操作就是一个一个删除，这么一个一个操作我们都记下来，然后每个操作记一个 $id$ 表示它将为第几个时间点做出贡献。</p>
+<p>当然对于原始序列的一个一个插入的操作这里的贡献是 $1$ ，删除操作的贡献自然是 $-1$ 。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/15/[题解]bzoj4826/#more" rel="contents">
+              <a class="btn" href="/2019/03/30/[题解]luoguP3157/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1057,7 +1041,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/15/[题解]bzoj4827/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/30/[题解]luoguP4248/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1077,7 +1061,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/15/[题解]bzoj4827/" class="post-title-link" itemprop="url">【题解】 [AH2017/HNOI2017]礼物  FFT  luoguP3723/bzoj4827</a>
+                <a href="/2019/03/30/[题解]luoguP4248/" class="post-title-link" itemprop="url">【题解】  [AHOI2013]差异  后缀自动机.SAM  luoguP4248</a>
               
             
           </h1>
@@ -1103,24 +1087,12 @@
                 
               
 
-              <time title="Created: 2019-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-15T00:00:00+08:00">2019-03-15</time>
+              <time title="Created: 2019-03-30 00:00:00 / Modified: 15:38:10" itemprop="dateCreated datePublished" datetime="2019-03-30T00:00:00+08:00">2019-03-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-29 13:52:22" itemprop="dateModified" datetime="2019-03-29T13:52:22+08:00">2019-03-29</time>
               
             
           </span>
@@ -1156,8 +1128,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/15/[题解]bzoj4827/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/15/[题解]bzoj4827/" itemprop="commentCount"></span>
+                <a href="/2019/03/30/[题解]luoguP4248/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/30/[题解]luoguP4248/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1187,13 +1159,12 @@
       <div>
       
         
-          <p><del>题目背景有些……………</del><br>通过题目我们可以知道最终我们要求的式子就是：</p>
-<script type="math/tex; mode=display">\sum_{i=1}^{n}(a_i+c-b_i)^2</script><p>于是我们将式子拆开：</p>
-<script type="math/tex; mode=display">(a_i+c-b_i)^2=a_i^2+b_i^2+c^2+2a_ic-2b_ic-2a_ib_i</script>
+          <p>刚开始发现 $SA$ 很可做，不过当时没有看范围，心想美滋滋了这个就是 $SA$ 的板子，然后一看范围心就凉了。</p>
+<p>不过可以用 $SAM$ ，我们知道，对于两个串，它们的最长公共子串就是它们在前缀树上的 $Lca$ 。这是显然的，不明白的同学可以康康 $Qiuly$ 酱之前写的 $SAM$ ，可以观察观察图片。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/15/[题解]bzoj4827/#more" rel="contents">
+              <a class="btn" href="/2019/03/30/[题解]luoguP4248/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1257,7 +1228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/15/[题解]bzoj4825/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/29/[题解]luoguP3302/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1277,7 +1248,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/15/[题解]bzoj4825/" class="post-title-link" itemprop="url">【题解】 [AH2017/HNOI2017]单旋  线段树  luoguP3721/bzoj4825</a>
+                <a href="/2019/03/29/[题解]luoguP3302/" class="post-title-link" itemprop="url">【题解】 [SDOI2013]森林  主席树+启发式合并  luoguP3302</a>
               
             
           </h1>
@@ -1303,7 +1274,7 @@
                 
               
 
-              <time title="Created: 2019-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-15T00:00:00+08:00">2019-03-15</time>
+              <time title="Created: 2019-03-29 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-29T00:00:00+08:00">2019-03-29</time>
             
 
             
@@ -1320,7 +1291,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:52:16" itemprop="dateModified" datetime="2019-03-29T13:52:16+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-30 15:18:12" itemprop="dateModified" datetime="2019-03-30T15:18:12+08:00">2019-03-30</time>
               
             
           </span>
@@ -1356,8 +1327,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/15/[题解]bzoj4825/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/15/[题解]bzoj4825/" itemprop="commentCount"></span>
+                <a href="/2019/03/29/[题解]luoguP3302/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/29/[题解]luoguP3302/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1387,13 +1358,12 @@
       <div>
       
         
-          <p>$Spaly​$ 是不会用的，这辈子也不会用的。</p>
-<p>这道题当然可以用 $Splay​$ 做，然而不会。</p>
-<p>于是考虑怎么来做这道题，我们先来观察一下所有的操作：</p>
+          <p>初看题面，看到 $K$ 大我们可以想到主席树，但是连边却又符合 $LCT$ ，但是毕竟 $LCT$ 是不能支持 $K$ 大的，因为 $Splay$ 辅助树不是二叉查找树。</p>
+<p>不过主席树我们可以大力启发式合并，合并的时候重建节点的倍增数组并且重新建立节点的权值线段树。这样子每个节点要被修改的期望次数为 $logn​$ 次，那么时间复杂度就是 $O(nlog^2n)​$ (貌似是的)，这足以让我们过这道题了。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/15/[题解]bzoj4825/#more" rel="contents">
+              <a class="btn" href="/2019/03/29/[题解]luoguP3302/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1457,7 +1427,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/14/[题解]luoguP3246/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/28/[考试总结]test20190328/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1477,7 +1447,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/14/[题解]luoguP3246/" class="post-title-link" itemprop="url">【题解】 [HNOI2016]序列  莫队+ST表  luoguP3246</a>
+                <a href="/2019/03/28/[考试总结]test20190328/" class="post-title-link" itemprop="url">【考试总结】  Test-2019.3.28  HNOI2019模拟</a>
               
             
           </h1>
@@ -1503,7 +1473,7 @@
                 
               
 
-              <time title="Created: 2019-03-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-14T00:00:00+08:00">2019-03-14</time>
+              <time title="Created: 2019-03-28 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-28T00:00:00+08:00">2019-03-28</time>
             
 
             
@@ -1520,7 +1490,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:54:22" itemprop="dateModified" datetime="2019-03-29T13:54:22+08:00">2019-03-29</time>
+                <time title="Modified: 2019-04-03 17:32:04" itemprop="dateModified" datetime="2019-04-03T17:32:04+08:00">2019-04-03</time>
               
             
           </span>
@@ -1556,8 +1526,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/14/[题解]luoguP3246/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/14/[题解]luoguP3246/" itemprop="commentCount"></span>
+                <a href="/2019/03/28/[考试总结]test20190328/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/28/[考试总结]test20190328/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1587,14 +1557,12 @@
       <div>
       
         
-          <p>一道莫队……….</p>
-<p>最主要的就是怎么从当前区间推到相邻区间。</p>
-<p>假设当前区间为 $[l,r]$ ，目标区间为 $[l,r+1]$ 。那么很显然这样子就会增加：</p>
-<script type="math/tex; mode=display">[l,r+1],[l+1,r+1],[l+2,r+1]\cdots \cdots</script><p>这些区间，现在我们要做的就是尽快的算出这些区间的答案。</p>
+          <p>今天的题目貌似暴力分好拿写欸，然而……窝只有 $70$ ？不过排名比昨天上升了什么鬼。</p>
+<p>$QwQ$ 题目的确很难懂，所以窝听了讲解后也没听懂多少，不过还是改出了第一题(第一题是人就改的出好吧o(≧口≦)o)。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/14/[题解]luoguP3246/#more" rel="contents">
+              <a class="btn" href="/2019/03/28/[考试总结]test20190328/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1658,7 +1626,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/13/[题解]luoguP3171/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/28/[题解]luoguP2463/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1678,7 +1646,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/13/[题解]luoguP3171/" class="post-title-link" itemprop="url">【题解】 [CQOI2015]网络吞吐量  网络流  luoguP3171</a>
+                <a href="/2019/03/28/[题解]luoguP2463/" class="post-title-link" itemprop="url">【题解】 [SDOI2008]Sandy的卡片  后缀数组.SA  luoguP2463</a>
               
             
           </h1>
@@ -1704,7 +1672,7 @@
                 
               
 
-              <time title="Created: 2019-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">2019-03-13</time>
+              <time title="Created: 2019-03-28 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-28T00:00:00+08:00">2019-03-28</time>
             
 
             
@@ -1721,7 +1689,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:54:18" itemprop="dateModified" datetime="2019-03-29T13:54:18+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:53:22" itemprop="dateModified" datetime="2019-03-29T13:53:22+08:00">2019-03-29</time>
               
             
           </span>
@@ -1757,8 +1725,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/13/[题解]luoguP3171/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/13/[题解]luoguP3171/" itemprop="commentCount"></span>
+                <a href="/2019/03/28/[题解]luoguP2463/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/28/[题解]luoguP2463/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1788,13 +1756,11 @@
       <div>
       
         
-          <p>题目要求你做什么就做什么呗。</p>
-<p>我们先跑最短路，然后按照最短路的边连网络流的边就好了。</p>
-<p>这里我选择跑堆优 $Dij$ ，然后我们枚举每一条边，判断着一条边是否为最短路的边，判断的方式很显然，就是看这条边的起点的 $dis$ 加上边权是否等于终点的 $dis$ 就好。</p>
+          <p>后缀数组，我们可以先将所有的卡片连成一个串，每一个卡片数列之间用一个极大数分开保证不出锅。然后的话，对于相同的定义有些鬼，使得我们不能直接做 $SA$ ，这个时候我们将所有的卡片数列的值都转换为当前位置减去上个位置的值即可。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/13/[题解]luoguP3171/#more" rel="contents">
+              <a class="btn" href="/2019/03/28/[题解]luoguP2463/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1858,7 +1824,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/13/[题解]luoguP1967/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/27/[考试总结]test20190327/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1878,7 +1844,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/13/[题解]luoguP1967/" class="post-title-link" itemprop="url">【题解】 货车运输  最大生成树+倍增Lca  luoguP1967</a>
+                <a href="/2019/03/27/[考试总结]test20190327/" class="post-title-link" itemprop="url">【考试总结】  Test-2019.3.27  HNOI2019模拟</a>
               
             
           </h1>
@@ -1904,7 +1870,7 @@
                 
               
 
-              <time title="Created: 2019-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-13T00:00:00+08:00">2019-03-13</time>
+              <time title="Created: 2019-03-27 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-27T00:00:00+08:00">2019-03-27</time>
             
 
             
@@ -1921,7 +1887,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:53:00" itemprop="dateModified" datetime="2019-03-29T13:53:00+08:00">2019-03-29</time>
+                <time title="Modified: 2019-04-03 17:32:26" itemprop="dateModified" datetime="2019-04-03T17:32:26+08:00">2019-04-03</time>
               
             
           </span>
@@ -1957,8 +1923,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/13/[题解]luoguP1967/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/13/[题解]luoguP1967/" itemprop="commentCount"></span>
+                <a href="/2019/03/27/[考试总结]test20190327/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/27/[考试总结]test20190327/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1988,12 +1954,13 @@
       <div>
       
         
-          <p>题目大意就是，有多组询问，每组询问包含两个整数 $x,y​$ ，求出 $x​$ 到 $y​$ 的一条路径，满足这条路径在所有的 $x​$ 到 $y​$ 的路径中，边权最小的边权值最大。</p>
-<p>这个很显然我们可以先求出图的最大生成树，那么 $x$ 到 $y$ 的目标路径肯定在最大生成树上，也只能在最大生成树上。</p>
+          <p>今天全是原题，然而窝几乎都没做过，于是挂了……</p>
+<p>丢人的是考场上组合数的式子 $C[i][j]$=$C[i$-$1][j]$+$C[i$-$1][j$-$1]$ 写成了 $C[i][j]$=$C[i][j$-$1]$+$C[i$-$1][j$-$1]$ ，然后第一题光荣爆 $0​$ ……TAT。</p>
+<p>吸取教训！</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/13/[题解]luoguP1967/#more" rel="contents">
+              <a class="btn" href="/2019/03/27/[考试总结]test20190327/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2057,7 +2024,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/11/[题解]luoguP2598/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/26/[算法]KD-Tree/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -2077,7 +2044,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/11/[题解]luoguP2598/" class="post-title-link" itemprop="url">【题解】 [ZJOI2009]狼和羊的故事  网络流  luoguP2598</a>
+                <a href="/2019/03/26/[算法]KD-Tree/" class="post-title-link" itemprop="url">【算法】 浅谈K-D Tree&学习笔记</a>
               
             
           </h1>
@@ -2103,7 +2070,7 @@
                 
               
 
-              <time title="Created: 2019-03-11 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-11T00:00:00+08:00">2019-03-11</time>
+              <time title="Created: 2019-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-26T00:00:00+08:00">2019-03-26</time>
             
 
             
@@ -2120,7 +2087,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:53:34" itemprop="dateModified" datetime="2019-03-29T13:53:34+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-30 15:17:28" itemprop="dateModified" datetime="2019-03-30T15:17:28+08:00">2019-03-30</time>
               
             
           </span>
@@ -2156,8 +2123,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/11/[题解]luoguP2598/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/11/[题解]luoguP2598/" itemprop="commentCount"></span>
+                <a href="/2019/03/26/[算法]KD-Tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/[算法]KD-Tree/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2187,14 +2154,12 @@
       <div>
       
         
-          <p>这题真的是裸的网络流……连我这种制杖都可以立刻想到正解。</p>
-<p>如果不考虑领地问题的话，这显然是一道很裸的最小割———割断最少的边使 $S$ 和 $T​$ 不连通。</p>
-<p>但是现在有了领地的问题……就是说限制了有些格子是一起的，不能被割开。</p>
-<p>既然不能被割开，就连一条 $inf$ 的边啊，这样就割不开了啊。</p>
+          <p>又是一个神奇的数据结构……</p>
+<p>$K$-$D \ Tree$ 中 $D$ 是维度($Dimension$)的缩写，所以 $K$-$D \ Tree$ 的实际意思就是 $K$ 维树。当然 $K$-$D \ Tree $ 一般用于维护二维平面上的信息，所以我们平常用的 $K$-$D\ Tree$  又叫 $2$-$D \ Tree$ 。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/11/[题解]luoguP2598/#more" rel="contents">
+              <a class="btn" href="/2019/03/26/[算法]KD-Tree/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2258,7 +2223,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/11/[题解]luoguCF896C/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/03/26/[题解]luoguP2766/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -2278,7 +2243,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/11/[题解]luoguCF896C/" class="post-title-link" itemprop="url">【题解】 Willem, Chtholly and Seniorious  珂朵莉树  luoguCF896C</a>
+                <a href="/2019/03/26/[题解]luoguP2766/" class="post-title-link" itemprop="url">【题解】 「网络流24题」最长不下降子序列问题  网络流  luoguP2766</a>
               
             
           </h1>
@@ -2304,7 +2269,7 @@
                 
               
 
-              <time title="Created: 2019-03-11 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-11T00:00:00+08:00">2019-03-11</time>
+              <time title="Created: 2019-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-26T00:00:00+08:00">2019-03-26</time>
             
 
             
@@ -2321,7 +2286,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:52:34" itemprop="dateModified" datetime="2019-03-29T13:52:34+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:54:14" itemprop="dateModified" datetime="2019-03-29T13:54:14+08:00">2019-03-29</time>
               
             
           </span>
@@ -2357,8 +2322,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/03/11/[题解]luoguCF896C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/11/[题解]luoguCF896C/" itemprop="commentCount"></span>
+                <a href="/2019/03/26/[题解]luoguP2766/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/[题解]luoguP2766/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2388,12 +2353,12 @@
       <div>
       
         
-          <p>神奇的珂朵莉树，优雅的暴力。</p>
-<p>珂朵莉树的主要思想就是对于一段连续的值相同的区间，将其缩为一个结点，然后丢到 $set$ 里面，主要的操作有拆分区间操作…….这货很强大，码量不短但极好写，而且一般不会出什么问题，调试也很方便。</p>
+          <p>第一问显然是一个很简单的 $DP$ ，但是第二问和第三问就要用最大流来求了，怎么求呢？</p>
+<p>首先我们 $DP$ 出来的 $f$ 数组，$f[i]$ 表示<strong>以i结尾的最长不下降子序列的长度</strong> ，然后就是网络流的连边了。首先因为一个点只能经过两次，我们需要将其拆为入点和出点，中间连的边的边权自然是 $1$ ，然后对于一个 $i$ ，如果 $f[i]$ 等于最长长度($s$)，那么很显然这个 $i$ 就可以给答案做出一个贡献，这个时候 $i$ 的出点向 $t$ 连一条边权为 $1$ 边。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/11/[题解]luoguCF896C/#more" rel="contents">
+              <a class="btn" href="/2019/03/26/[题解]luoguP2766/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2446,7 +2411,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2490,7 +2455,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-count">95</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2630,7 +2595,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">55</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">61</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2757,7 +2734,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.3k字</span>
+  <span class="post-count">博客全站共112.3k字</span>
 </div>
         
 
@@ -3291,24 +3268,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   
@@ -3334,5 +3294,22 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>

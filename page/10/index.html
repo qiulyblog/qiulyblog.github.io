@@ -466,7 +466,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP2147/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP1730/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -486,7 +486,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/13/[题解]luoguP2147/" class="post-title-link" itemprop="url">【题解】 [SDOI2008]Cave洞穴勘测  LCT  bzoj2049/洛谷P2147</a>
+                <a href="/2019/02/13/[题解]luoguP1730/" class="post-title-link" itemprop="url">【题解】 Tyvj1730二逼平衡树 树套树  luogu3380/bzoj3196</a>
               
             
           </h1>
@@ -529,7 +529,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:53:10" itemprop="dateModified" datetime="2019-03-29T13:53:10+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:52:52" itemprop="dateModified" datetime="2019-03-29T13:52:52+08:00">2019-03-29</time>
               
             
           </span>
@@ -565,8 +565,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/13/[题解]luoguP2147/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP2147/" itemprop="commentCount"></span>
+                <a href="/2019/02/13/[题解]luoguP1730/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP1730/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -596,13 +596,12 @@
       <div>
       
         
-          <p>Link-Cut-Tree的模板题啊……(听说还可以用其他的方法做，不管了，直接上LCT)</p>
-<p>没有要求维护点权，只需要维护点的连通性即可。</p>
-<p>就是朴素的LCT，居然还不要pushup。</p>
+          <p>树套树，直接线段树套 $Splay$ .</p>
+<p>因为有区间的$k$大，不能直接用$Splay$(大佬忽视这句话)，显然可以用树套树(废话)。对于每一个线段树的节点都建一棵 $Splay$ ，需要查询这个节点所代表的区间第 $k$ 大等操作时直接用 $Splay$ 来完成即可……</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/13/[题解]luoguP2147/#more" rel="contents">
+              <a class="btn" href="/2019/02/13/[题解]luoguP1730/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -864,7 +863,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP1730/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP2147/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -884,7 +883,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/13/[题解]luoguP1730/" class="post-title-link" itemprop="url">【题解】 Tyvj1730二逼平衡树 树套树  luogu3380/bzoj3196</a>
+                <a href="/2019/02/13/[题解]luoguP2147/" class="post-title-link" itemprop="url">【题解】 [SDOI2008]Cave洞穴勘测  LCT  bzoj2049/洛谷P2147</a>
               
             
           </h1>
@@ -927,7 +926,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:52:52" itemprop="dateModified" datetime="2019-03-29T13:52:52+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:53:10" itemprop="dateModified" datetime="2019-03-29T13:53:10+08:00">2019-03-29</time>
               
             
           </span>
@@ -963,8 +962,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/13/[题解]luoguP1730/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP1730/" itemprop="commentCount"></span>
+                <a href="/2019/02/13/[题解]luoguP2147/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP2147/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -994,12 +993,13 @@
       <div>
       
         
-          <p>树套树，直接线段树套 $Splay$ .</p>
-<p>因为有区间的$k$大，不能直接用$Splay$(大佬忽视这句话)，显然可以用树套树(废话)。对于每一个线段树的节点都建一棵 $Splay$ ，需要查询这个节点所代表的区间第 $k$ 大等操作时直接用 $Splay$ 来完成即可……</p>
+          <p>Link-Cut-Tree的模板题啊……(听说还可以用其他的方法做，不管了，直接上LCT)</p>
+<p>没有要求维护点权，只需要维护点的连通性即可。</p>
+<p>就是朴素的LCT，居然还不要pushup。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/13/[题解]luoguP1730/#more" rel="contents">
+              <a class="btn" href="/2019/02/13/[题解]luoguP2147/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1063,7 +1063,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]bzoj2957/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP2387/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1083,7 +1083,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/13/[题解]bzoj2957/" class="post-title-link" itemprop="url">【题解】 楼房重建 线段树 bzoj2957</a>
+                <a href="/2019/02/13/[题解]luoguP2387/" class="post-title-link" itemprop="url">【题解】 [NOI2014]魔法森林  动态加边Spfa  bzoj3669/luogu2387</a>
               
             
           </h1>
@@ -1126,7 +1126,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:52:02" itemprop="dateModified" datetime="2019-03-29T13:52:02+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:53:18" itemprop="dateModified" datetime="2019-03-29T13:53:18+08:00">2019-03-29</time>
               
             
           </span>
@@ -1162,8 +1162,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/13/[题解]bzoj2957/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]bzoj2957/" itemprop="commentCount"></span>
+                <a href="/2019/02/13/[题解]luoguP2387/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP2387/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1193,12 +1193,13 @@
       <div>
       
         
-          <p>每个楼房，还有单点修改操作。简单的想到用线段树来维护信息。</p>
-<p>显然线段树只需要维护y/x即可，对于每一个楼房，能看见的条件就是前面楼房的y/x的严格小于当前楼房的y/x。</p>
+          <p>膜法森林2333……</p>
+<p>显然是一道 $LCT$ 动态加边的题目。</p>
+<p>然而并不需要这么高深的数据结构来动态加边<del>(实际上是不会)</del>，我们只需要 $Spfa$ 动态加边即可切掉此题。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/13/[题解]bzoj2957/#more" rel="contents">
+              <a class="btn" href="/2019/02/13/[题解]luoguP2387/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

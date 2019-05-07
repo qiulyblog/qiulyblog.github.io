@@ -307,7 +307,7 @@
         
         
           
-          <li class="menu-item menu-item-daily">
+          <li class="menu-item menu-item-diary">
 
     
     
@@ -317,7 +317,24 @@
 
     
 
-    <a href="/daily/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>daily</a>
+    <a href="/diary/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Diary</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/friend/" rel="section"><i class="menu-item-icon fa fa-fw fa-users"></i> <br>Friends</a>
 
   </li>
         
@@ -369,6 +386,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-adrakroom">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/adrakroom/" rel="section"><i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>Adrakroom</a>
 
   </li>
         
@@ -466,7 +500,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/15/[题解]luoguP2467/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/15/[题解]luoguP3403/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -486,7 +520,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/15/[题解]luoguP2467/" class="post-title-link" itemprop="url">【题解】 [SDOI2010]地精部落 线性DP luogu2467</a>
+                <a href="/2019/02/15/[题解]luoguP3403/" class="post-title-link" itemprop="url">【题解】 跳楼机 同余最短路 luogu3403</a>
               
             
           </h1>
@@ -529,7 +563,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-07 09:59:55" itemprop="dateModified" datetime="2019-05-07T09:59:55+08:00">2019-05-07</time>
+                <time title="Modified: 2019-03-29 13:54:40" itemprop="dateModified" datetime="2019-03-29T13:54:40+08:00">2019-03-29</time>
               
             
           </span>
@@ -565,8 +599,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/15/[题解]luoguP2467/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/[题解]luoguP2467/" itemprop="commentCount"></span>
+                <a href="/2019/02/15/[题解]luoguP3403/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/[题解]luoguP3403/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -596,12 +630,14 @@
       <div>
       
         
-          <p>好巧的一道思维题啊！</p>
-<p>思维量极大但是码量极小，真的好巧妙啊！(好了不废话进入主题)</p>
+          <p>对于 $x,y,z$ 三个操作，我们先考虑 $y,z$ 两个操作的情况。</p>
+<p>$f[i]$ 表示通过 $y,z$ 两个操作可以到达的 $mod   x=i$ 最小的楼层。</p>
+<p>可以得知：$f[i+y]=f[i]+y,f[i+z]=f[i]+z.$</p>
+<p>对于最短路，我们可以用一下形式建边：</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/15/[题解]luoguP2467/#more" rel="contents">
+              <a class="btn" href="/2019/02/15/[题解]luoguP3403/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -665,7 +701,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/15/[题解]luoguP4116/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/15/[题解]luoguP3355/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -685,7 +721,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/15/[题解]luoguP4116/" class="post-title-link" itemprop="url">【题解】 Qtree3 LCT luoguP4116</a>
+                <a href="/2019/02/15/[题解]luoguP3355/" class="post-title-link" itemprop="url">【题解】 「网络流24题」骑士共存问题 网络流 luoguP3355</a>
               
             
           </h1>
@@ -728,7 +764,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:55:02" itemprop="dateModified" datetime="2019-03-29T13:55:02+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:54:36" itemprop="dateModified" datetime="2019-03-29T13:54:36+08:00">2019-03-29</time>
               
             
           </span>
@@ -764,8 +800,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/15/[题解]luoguP4116/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/[题解]luoguP4116/" itemprop="commentCount"></span>
+                <a href="/2019/02/15/[题解]luoguP3355/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/[题解]luoguP3355/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -795,13 +831,13 @@
       <div>
       
         
-          <p>第一个操作显然是不要考虑的……</p>
-<p>考虑第二个操作怎么办(实际上是超级easy的)</p>
-<p>每个节点维护一个值<code>sum</code>，表示 $Splay$ 中它子树的和，每个点的权值为<strong>1(黑)0(白)</strong>。</p>
+          <p>最大流于最小割的转换。</p>
+<p>假设现在棋盘上非障碍的位置全部摆满了骑士，我们拿走 $x$ 个的骑士可以使棋盘上的所有骑士互不冲突，求最小的 $x$.</p>
+<p>可以跑匈牙利，也可以跑最大流算法，我选择跑 $Dinic$。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/15/[题解]luoguP4116/#more" rel="contents">
+              <a class="btn" href="/2019/02/15/[题解]luoguP3355/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1064,7 +1100,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[题解]luoguP4035/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[算法]树套树(线段树套平衡树)/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -1084,7 +1120,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/14/[题解]luoguP4035/" class="post-title-link" itemprop="url">【题解】 [JSOI2008]球形空间产生器  高斯消元  洛谷P4035</a>
+                <a href="/2019/02/14/[算法]树套树(线段树套平衡树)/" class="post-title-link" itemprop="url">【算法】 浅谈树套树(线段树套平衡树)&学习笔记</a>
               
             
           </h1>
@@ -1127,7 +1163,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:54:54" itemprop="dateModified" datetime="2019-03-29T13:54:54+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:51:48" itemprop="dateModified" datetime="2019-03-29T13:51:48+08:00">2019-03-29</time>
               
             
           </span>
@@ -1163,8 +1199,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/14/[题解]luoguP4035/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[题解]luoguP4035/" itemprop="commentCount"></span>
+                <a href="/2019/02/14/[算法]树套树(线段树套平衡树)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[算法]树套树(线段树套平衡树)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1194,12 +1230,15 @@
       <div>
       
         
-          <p>“你要<strong>求出</strong>这个n维球体的<strong>球心坐标</strong>“，这使我想到的解方程……</p>
-<p>先假设n=2，这是一个二维平面。设圆心的坐标为$(x,y)$，有两个坐标$(a_1,b_1)$和$(a_2,b_2)$，显然两个坐标的关系为：</p>
+          <blockquote>
+<p>唉还是太弱了，毕竟只会初级的线段树套平衡树，$QvQ$</p>
+<p>码量巨大，超级不适合我这种天生码量恐惧症的人……</p>
+<p>那么我们开始正文</p>
+</blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/14/[题解]luoguP4035/#more" rel="contents">
+              <a class="btn" href="/2019/02/14/[算法]树套树(线段树套平衡树)/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1467,208 +1506,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[算法]树套树(线段树套平衡树)/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qiuly">
-      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
-      <meta itemprop="image" content="/images/a.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Qiuly's blog!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/14/[算法]树套树(线段树套平衡树)/" class="post-title-link" itemprop="url">【算法】 浅谈树套树(线段树套平衡树)&学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-         
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-14T00:00:00+08:00">2019-02-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-29 13:51:48" itemprop="dateModified" datetime="2019-03-29T13:51:48+08:00">2019-03-29</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/14/[算法]树套树(线段树套平衡树)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[算法]树套树(线段树套平衡树)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      <div>
-      
-        
-          <blockquote>
-<p>唉还是太弱了，毕竟只会初级的线段树套平衡树，$QvQ$</p>
-<p>码量巨大，超级不适合我这种天生码量恐惧症的人……</p>
-<p>那么我们开始正文</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/14/[算法]树套树(线段树套平衡树)/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </div></article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[题解]luoguP4001/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1805,207 +1642,6 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/02/14/[题解]luoguP4001/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </div></article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[题解]luoguP5155/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qiuly">
-      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
-      <meta itemprop="image" content="/images/a.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Qiuly's blog!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/14/[题解]luoguP5155/" class="post-title-link" itemprop="url">【题解】 [USACO18DEC]Balance Beam  期望+凸包  洛谷P5155</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-         
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-14T00:00:00+08:00">2019-02-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-28 22:20:56" itemprop="dateModified" datetime="2019-04-28T22:20:56+08:00">2019-04-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/14/[题解]luoguP5155/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[题解]luoguP5155/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      <div>
-      
-        
-          <blockquote>
-<p>被概率冲昏的头脑~~~</p>
-</blockquote>
-<p>我们先将样例在图上画下来：</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/14/[题解]luoguP5155/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2270,7 +1906,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[题解]luoguP2387/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[题解]luoguP4035/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -2290,7 +1926,407 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/02/13/[题解]luoguP2387/" class="post-title-link" itemprop="url">【题解】 [NOI2014]魔法森林  动态加边Spfa  bzoj3669/luogu2387</a>
+                <a href="/2019/02/14/[题解]luoguP4035/" class="post-title-link" itemprop="url">【题解】 [JSOI2008]球形空间产生器  高斯消元  洛谷P4035</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+         
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-14T00:00:00+08:00">2019-02-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-29 13:54:54" itemprop="dateModified" datetime="2019-03-29T13:54:54+08:00">2019-03-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/14/[题解]luoguP4035/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[题解]luoguP4035/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      <div>
+      
+        
+          <p>“你要<strong>求出</strong>这个n维球体的<strong>球心坐标</strong>“，这使我想到的解方程……</p>
+<p>先假设n=2，这是一个二维平面。设圆心的坐标为$(x,y)$，有两个坐标$(a_1,b_1)$和$(a_2,b_2)$，显然两个坐标的关系为：</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/14/[题解]luoguP4035/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </div></article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/14/[题解]luoguP5155/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiuly">
+      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
+      <meta itemprop="image" content="/images/a.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qiuly's blog!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/14/[题解]luoguP5155/" class="post-title-link" itemprop="url">【题解】 [USACO18DEC]Balance Beam  期望+凸包  洛谷P5155</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+         
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-14T00:00:00+08:00">2019-02-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-28 22:20:56" itemprop="dateModified" datetime="2019-04-28T22:20:56+08:00">2019-04-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/14/[题解]luoguP5155/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/14/[题解]luoguP5155/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      <div>
+      
+        
+          <blockquote>
+<p>被概率冲昏的头脑~~~</p>
+</blockquote>
+<p>我们先将样例在图上画下来：</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/14/[题解]luoguP5155/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </div></article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/02/13/[算法]点分治/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiuly">
+      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
+      <meta itemprop="image" content="/images/a.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qiuly's blog!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/13/[算法]点分治/" class="post-title-link" itemprop="url">【算法】 点分治总结&学习笔记</a>
               
             
           </h1>
@@ -2333,7 +2369,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-29 13:53:18" itemprop="dateModified" datetime="2019-03-29T13:53:18+08:00">2019-03-29</time>
+                <time title="Modified: 2019-03-29 13:51:50" itemprop="dateModified" datetime="2019-03-29T13:51:50+08:00">2019-03-29</time>
               
             
           </span>
@@ -2369,8 +2405,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/02/13/[题解]luoguP2387/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[题解]luoguP2387/" itemprop="commentCount"></span>
+                <a href="/2019/02/13/[算法]点分治/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/[算法]点分治/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2400,13 +2436,13 @@
       <div>
       
         
-          <p>膜法森林2333……</p>
-<p>显然是一道 $LCT$ 动态加边的题目。</p>
-<p>然而并不需要这么高深的数据结构来动态加边<del>(实际上是不会)</del>，我们只需要 $Spfa$ 动态加边即可切掉此题。</p>
+          <blockquote>
+<p>其实很短的啦，感觉……感觉淀粉质这种东西好像没什么可以总结的……<br>只会有一些简单的板子题而已……(实际上是砍不动难的题目)<br>(淀粉质吗？味道真是不错呢嘿嘿嘿)</p>
+</blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/02/13/[题解]luoguP2387/#more" rel="contents">
+              <a class="btn" href="/2019/02/13/[算法]点分治/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2501,7 +2537,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
                     <span class="site-state-item-count">97</span>
                     <span class="site-state-item-name">posts</span>
@@ -2782,7 +2818,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共112.3k字</span>
+  <span class="post-count">博客全站共112k字</span>
 </div>
         
 
@@ -3316,24 +3352,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   
@@ -3359,5 +3378,22 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>

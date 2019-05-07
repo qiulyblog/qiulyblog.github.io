@@ -307,7 +307,7 @@
         
         
           
-          <li class="menu-item menu-item-daily">
+          <li class="menu-item menu-item-diary">
 
     
     
@@ -317,7 +317,24 @@
 
     
 
-    <a href="/daily/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>daily</a>
+    <a href="/diary/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Diary</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/friend/" rel="section"><i class="menu-item-icon fa fa-fw fa-users"></i> <br>Friends</a>
 
   </li>
         
@@ -369,6 +386,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-adrakroom">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/adrakroom/" rel="section"><i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>Adrakroom</a>
 
   </li>
         
@@ -2208,7 +2242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/04/02/[题解]luoguP2042/">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/04/02/[题解]luoguP4556/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiuly">
@@ -2228,7 +2262,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/02/[题解]luoguP2042/" class="post-title-link" itemprop="url">【题解】 [NOI2005]维护数列  Splay  luoguP2042</a>
+                <a href="/2019/04/02/[题解]luoguP4556/" class="post-title-link" itemprop="url">【题解】 [Vani有约会]雨天的尾巴  线段树+启发式合并  luoguP4556</a>
               
             
           </h1>
@@ -2254,7 +2288,7 @@
                 
               
 
-              <time title="Created: 2019-04-02 00:00:00 / Modified: 10:06:22" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
+              <time title="Created: 2019-04-02 00:00:00 / Modified: 15:57:02" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
             
 
             
@@ -2295,8 +2329,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2019/04/02/[题解]luoguP2042/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/[题解]luoguP2042/" itemprop="commentCount"></span>
+                <a href="/2019/04/02/[题解]luoguP4556/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/[题解]luoguP4556/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2326,13 +2360,12 @@
       <div>
       
         
-          <p>神奇的题目。</p>
-<p>网上说什么做了这道题 $Splay$ 就差不多了，嗯对窝也这么觉得。于是终于码掉了。</p>
-<p>主要涉及的操作还是提取区间，我们组需要将 $l-1$ 提取至 $root$ ， 然后将 $r+1$ 提取至 $l-1$ 的下方，最终询问的 $l,r$ 区间的 $Splay$ 就是 $r+1$ 的左孩子。</p>
+          <p>毒瘤出题人，卡时间卡空间！</p>
+<p>嗯，如果这一题不是在树上的话貌似可以直接权值线段树维护？不过到了树上的话难道可以权值线段树+树链剖分，表示不明白。于是尝试了一发线段树合并，但是我们的线段树是权值线段树。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/04/02/[题解]luoguP2042/#more" rel="contents">
+              <a class="btn" href="/2019/04/02/[题解]luoguP4556/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -2427,7 +2460,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
                     <span class="site-state-item-count">97</span>
                     <span class="site-state-item-name">posts</span>
@@ -2708,7 +2741,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共112.3k字</span>
+  <span class="post-count">博客全站共112k字</span>
 </div>
         
 
@@ -3242,24 +3275,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   
@@ -3285,5 +3301,22 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>

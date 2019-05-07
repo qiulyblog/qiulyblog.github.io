@@ -141,17 +141,18 @@
 
 
 
-  <meta name="description" content="Dreams are also necessary. What if they come true?">
-<meta name="keywords" content="C++,C#,Students">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qiuly&#39;s blog!">
-<meta property="og:url" content="http://qiulyblog.github.io/tags/四边形不等式/index.html">
+  <meta name="description" content="其实这题很容易设出四维的 $\rm{DP}$ ，也就是用 $dp_{i,j,x,y}$ 表示第一个序列的终止位置为 $i$ 且长度为 $x$，第二个序列的终止位置为 $j$ 且长度为 $y$ 是否成立 ，然后也很容易想到降维，枚举当前序列长度 $len$ 的时候知道了 $x$ 就已经知道 $y$ 了—— $y$ 就是 $len-x$ 。也就是说现在的 $DP$ 是 $O(n^3)$ 的，还需要优化">
+<meta name="keywords" content="DP,题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【题解】 [HNOI2009]双递增序列  线性DP  luoguP4728">
+<meta property="og:url" content="http://qiulyblog.github.io/2019/05/07/[题解]luoguP4728/index.html">
 <meta property="og:site_name" content="Qiuly&#39;s blog!">
-<meta property="og:description" content="Dreams are also necessary. What if they come true?">
+<meta property="og:description" content="其实这题很容易设出四维的 $\rm{DP}$ ，也就是用 $dp_{i,j,x,y}$ 表示第一个序列的终止位置为 $i$ 且长度为 $x$，第二个序列的终止位置为 $j$ 且长度为 $y$ 是否成立 ，然后也很容易想到降维，枚举当前序列长度 $len$ 的时候知道了 $x$ 就已经知道 $y$ 了—— $y$ 就是 $len-x$ 。也就是说现在的 $DP$ 是 $O(n^3)$ 的，还需要优化">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-07T02:42:18.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qiuly&#39;s blog!">
-<meta name="twitter:description" content="Dreams are also necessary. What if they come true?">
+<meta name="twitter:title" content="【题解】 [HNOI2009]双递增序列  线性DP  luoguP4728">
+<meta name="twitter:description" content="其实这题很容易设出四维的 $\rm{DP}$ ，也就是用 $dp_{i,j,x,y}$ 表示第一个序列的终止位置为 $i$ 且长度为 $x$，第二个序列的终止位置为 $j$ 且长度为 $y$ 是否成立 ，然后也很容易想到降维，枚举当前序列长度 $len$ 的时候知道了 $x$ 就已经知道 $y$ 了—— $y$ 就是 $len-x$ 。也就是说现在的 $DP$ 是 $O(n^3)$ 的，还需要优化">
 
 
 
@@ -160,7 +161,7 @@
 
 
 
-  <link rel="canonical" href="http://qiulyblog.github.io/tags/四边形不等式/">
+  <link rel="canonical" href="http://qiulyblog.github.io/2019/05/07/[题解]luoguP4728/">
 
 
 
@@ -170,7 +171,7 @@
   };
 </script>
 
-  <title>Tag: 四边形不等式 | Qiuly's blog!</title>
+  <title>【题解】 [HNOI2009]双递增序列  线性DP  luoguP4728 | Qiuly's blog!</title>
   
 
 
@@ -230,7 +231,7 @@
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="\js\snow.js"></script>
   
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 <a href="https://qiulyblog.github.io/" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -323,7 +324,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -445,88 +446,238 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>四边形不等式<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qiulyblog.github.io/2019/05/07/[题解]luoguP4728/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qiuly">
+      <meta itemprop="description" content="Dreams are also necessary. What if they come true?">
+      <meta itemprop="image" content="/images/a.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Qiuly's blog!">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/02/25/[题解]luoguP1912/" itemprop="url">
-            
-              <span itemprop="name">【题解】 [NOI2009]诗人小G 四边形不等式/决策单调性优化DP luoguP1912</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">【题解】 [HNOI2009]双递增序列  线性DP  luoguP4728
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-25T00:00:00+08:00" content="2019-02-25">
-          02-25
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+         
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-07 00:00:00 / Modified: 10:42:18" itemprop="dateCreated datePublished" datetime="2019-05-07T00:00:00+08:00">2019-05-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/05/07/[题解]luoguP4728/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/05/07/[题解]luoguP4728/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      <div>
+      
+        <p>其实这题很容易设出四维的 $\rm{DP}$ ，也就是用 $dp_{i,j,x,y}$ 表示<strong>第一个序列的终止位置为 $i$ 且长度为 $x$，第二个序列的终止位置为 $j$ 且长度为 $y$ 是否成立</strong> ，然后也很容易想到降维，枚举当前序列长度 $len$ 的时候知道了 $x$ 就已经知道 $y$ 了—— $y$ 就是 $len-x$ 。也就是说现在的 $DP$ 是 $O(n^3)$ 的，还需要优化。</p>
+<a id="more"></a>
+<p>考虑设 $dp_{i,j}$ 表示第一个序列的最终位置为 $i-1$ 且长度为 $j$ 时第二个序列的最终位置的最小值。枚举当前数字 $i$ ，然后分两种情况进行转移——将 $a_i$ 放到第一个序列末尾 $\texttt{and}$ 将 $a_i$ 放到第二个序列末尾。</p>
+<p>放到第一个序列末尾很好想：因为当前第一个序列的结尾处就是 $a_{i-1}$ ，比较一下大小直接转移就好了：</p>
+<script type="math/tex; mode=display">dp_{i,j}=min(dp_{i,j},dp_{i-1,j-1}) \ \ \ (a_i>a_{i-1})</script><p>因为第二个序列的末尾没变，所有直接转移就好。</p>
+<p>接下来考虑将第 $i$ 个数放到第二个序列末尾的情况，其实第一个序列和第二个序列没区别，当然除了名字上有一个字的差异，假设第 $i-1$ 个数是第二个序列末尾，当前第一个序列的长度为 $j-1$ ，那么第二个序列的长度因该就是 $(i-1)-(j-1)$ 了，因为我们假设了第 $i-1$ 个数是第二个序列末尾，那么 $dp_{i-1,i-j}$ 又可以被解释为<strong>第二个序列的末尾为 $i-1$ 个数且第二个序列的长度为 $i-j$ 的时候第一个序列的末尾的最小值</strong> ，如果这个最小值小于 $a_i$ ，说明 $a_i$ 可以接到第一个序列前面，那么这个时候第二个序列的末尾为 $a_{i-1}$ ，显然又有转移：</p>
+<script type="math/tex; mode=display">dp_{i,j}=min(dp_{i,j},a_{i-1}) \ \ \ (a_i>dp_{i-1,i-j})</script><p>开始的时候我们将 $dp$ 数组赋成极大值，然后最后判断一下 $dp_{n,n/2}$ 这个状态变小没有就好。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">2e3</span>+<span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">1e9</span>+<span class="number">9</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">IN</span><span class="params">(_Tp&amp;x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch;<span class="keyword">bool</span> flag=<span class="number">0</span>;x=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(ch=getchar(),!<span class="built_in">isdigit</span>(ch)) <span class="keyword">if</span>(ch==<span class="string">'-'</span>) flag=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(ch)) x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">if</span>(flag) x=-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[N],f[N][N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;IN(n);</span><br><span class="line">    <span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="keyword">sizeof</span>(f));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i) IN(a[i]);</span><br><span class="line">    a[<span class="number">0</span>]=f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i) &#123;</span><br><span class="line">        f[i][<span class="number">0</span>]=a[i];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i&amp;&amp;j&lt;=n/<span class="number">2</span>;++j) &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;a[i<span class="number">-1</span>]) f[i][j]=min(f[i][j],f[i<span class="number">-1</span>][j<span class="number">-1</span>]);</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;f[i<span class="number">-1</span>][i-j]) f[i][j]=min(f[i][j],a[i<span class="number">-1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">return</span> f[n][n/<span class="number">2</span>]&lt;<span class="number">0x3f3f3f3f</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;IN(T);</span><br><span class="line">    <span class="keyword">while</span>(T--) <span class="built_in">puts</span>(solve()?<span class="string">"Yes!"</span>:<span class="string">"No!"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>感觉这道题的确很绕……=。=</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DP/" rel="tag"><i class="fa fa-tag"></i>
+
+ DP</a>
+          
+            <a href="/tags/题解/" rel="tag"><i class="fa fa-tag"></i>
+
+ 题解</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/06/[题解]luoguP4099/" rel="next" title="【题解】 [HEOI2013]SAO  组合数学+树形DP  luoguP4099">
+                <i class="fa fa-chevron-left"></i> 【题解】 [HEOI2013]SAO  组合数学+树形DP  luoguP4099
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </div></article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -546,8 +697,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -797,6 +957,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.</span> <span class="nav-text">Code:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -943,6 +1120,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -982,6 +1163,49 @@
 
 
 
+
+  
+    <!-- LOCAL: You can save these files to your site and update links -->
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+<!-- END LOCAL -->
+
+<style>
+#gitment-container a {
+  border-bottom: none;
+}
+
+</style>
+
+<script>
+  function renderGitment() {
+    var gitment = new Gitmint({
+      id: window.location.pathname,
+      owner: 'qiulyblog',
+      repo: 'my-blog',
+      
+        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+      
+      oauth: {
+      
+      
+        client_secret: 'b9ca9dc95698b4e85ead9064086bff55db2d2916',
+      
+        client_id: '6dcfca74584cc2f37505'
+      }
+    });
+    gitment.render('gitment-container');
+  }
+
+  
+    renderGitment();
+  
+</script>
+
+  
 
 
   
@@ -1303,7 +1527,57 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1322,20 +1596,7 @@
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
 
-
-
-
-
-  
-
-  
-
-  
-  
-
-  
-  
-
+    
   
 
 

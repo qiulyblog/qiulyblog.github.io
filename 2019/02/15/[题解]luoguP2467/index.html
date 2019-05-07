@@ -149,7 +149,7 @@
 <meta property="og:site_name" content="Qiuly&#39;s blog!">
 <meta property="og:description" content="好巧的一道思维题啊！ 思维量极大但是码量极小，真的好巧妙啊！(好了不废话进入主题)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-23T06:29:02.000Z">
+<meta property="og:updated_time" content="2019-05-07T01:59:55.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】 [SDOI2010]地精部落 线性DP luogu2467">
 <meta name="twitter:description" content="好巧的一道思维题啊！ 思维量极大但是码量极小，真的好巧妙啊！(好了不废话进入主题)">
@@ -527,7 +527,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-23 14:29:02" itemprop="dateModified" datetime="2019-04-23T14:29:02+08:00">2019-04-23</time>
+                <time title="Modified: 2019-05-07 09:59:55" itemprop="dateModified" datetime="2019-05-07T09:59:55+08:00">2019-05-07</time>
               
             
           </span>
@@ -607,13 +607,13 @@
 <p>很容易的可以想到，设 $summit[i][j]$ 表示长度为 $j$ 的波动数列，此波动数列的第一个数为 $i$，且在题目中，$i$ 为山峰，这样状态下的方案总数。</p>
 <p>同样的，我们同时设 $valley[i][j]$ 表示长度为 $j$ 的波动数列，此波动数列的第一个数为 $i$，且在题目中，$i$ 为山谷，这样状态下的方案总数。</p>
 <p>那么答案是多少呢？由于数列中的每一个元素都可以做第一个元素，且都有可能做”山峰”或者是”山脉”，所以我们的答案应该是：</p>
-<h3 id="sum-i-1-n-summit-i-n-valley-i-n"><a href="#sum-i-1-n-summit-i-n-valley-i-n" class="headerlink" title="$\sum_{i=1}^{n} summit[i][n]+valley[i][n]$"></a>$\sum_{i=1}^{n} summit[i][n]+valley[i][n]$</h3><p>现在来考虑怎么转移。</p>
+<script type="math/tex; mode=display">\sum_{i=1}^{n} summit[i][n]+valley[i][n]</script><p>现在来考虑怎么转移。</p>
 <p>以 $summit$ 的转移为例子，假设现在需要转移 $summit[i][n]$.</p>
 <p>那么这个波动数列的第二项肯定严格小于 $i$ ，而第三项又严格大于第二项，所以如果不看第一项的话，这个数列就变成了由第二项起头，并且第二项是”山谷”，设第二项的数为 $j$ ，那么其方案数可以用 $valley[j][n-1]$ 来表示。</p>
 <p>由于第二项可以是数列中严格小于 $i$ 的任何数，因此我们可以列出转移式：</p>
-<h3 id="summit-i-n-sum-k-1-i-1-valley-k-n-1"><a href="#summit-i-n-sum-k-1-i-1-valley-k-n-1" class="headerlink" title="$summit[i][n] = \sum_{k=1}^{i-1} valley[k][n-1]$"></a>$summit[i][n] = \sum_{k=1}^{i-1} valley[k][n-1]$</h3><p>因为题目说了是<strong>严格小于</strong>，所以可以这样子统计，<del>亲，放心哦！这样子不会出锅！</del></p>
+<script type="math/tex; mode=display">summit[i][n] = \sum_{k=1}^{i-1} valley[k][n-1]</script><p>因为题目说了是<strong>严格小于</strong>，所以可以这样子统计。</p>
 <p>同样的，$valley[i][j]$ 也是这样转移：</p>
-<h3 id="valley-i-n-sum-k-i-n-1-summit-k-n-1"><a href="#valley-i-n-sum-k-i-n-1-summit-k-n-1" class="headerlink" title="$valley[i][n] = \sum_{k=i}^{n-1} summit[k][n-1]$"></a>$valley[i][n] = \sum_{k=i}^{n-1} summit[k][n-1]$</h3><p>我们现在可以很轻易的打出正解了，但是想象一下，我们有那么大的空间吗？$2<em>4200</em>4200$？貌似很紧诶(虽然我是踩线没有 $MLE$)</p>
+<script type="math/tex; mode=display">valley[i][n] = \sum_{k=i}^{n-1} summit[k][n-1]</script><p>我们现在可以很轻易的打出正解了，但是想象一下，我们有那么大的空间吗？$2\cdot 4200\cdot     4200$？貌似很紧诶(虽然我是踩线没有 $MLE$)</p>
 <h4 id="那就使用滚动数组！"><a href="#那就使用滚动数组！" class="headerlink" title="那就使用滚动数组！"></a>那就使用滚动数组！</h4><p>还有，这样子统计，复杂度将会是 $O(n^3)$ ！怎么优化呢？</p>
 <h4 id="前缀和就好了呀！"><a href="#前缀和就好了呀！" class="headerlink" title="前缀和就好了呀！"></a>前缀和就好了呀！</h4><p>然后……然后就没有然后了……</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RI register int </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> A printf(<span class="meta-string">"A"</span>)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">4205</span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">IN</span><span class="params">(_Tp&amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch;<span class="keyword">bool</span> flag=<span class="number">0</span>;x=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(ch=getchar(),!<span class="built_in">isdigit</span>(ch))<span class="keyword">if</span>(ch==<span class="string">'-'</span>)flag=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">isdigit</span>(ch))x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">	<span class="keyword">if</span>(flag)x=-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> summit[N][<span class="number">2</span>],valley[N][<span class="number">2</span>],ans,sum,p;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;sum,&amp;p);</span><br><span class="line">    summit[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">1</span>,valley[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>,valley[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">3</span>;n&lt;=sum;++n)</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">           <span class="keyword">int</span> sum_val,sum_sum;</span><br><span class="line">           sum_val=(summit[n<span class="number">-1</span>][(n<span class="number">-1</span>)&amp;<span class="number">1</span>]-summit[i<span class="number">-1</span>][(n<span class="number">-1</span>)&amp;<span class="number">1</span>]+p)%p;</span><br><span class="line">           valley[i][n&amp;<span class="number">1</span>]=(valley[i<span class="number">-1</span>][n&amp;<span class="number">1</span>]+sum_val)%p;</span><br><span class="line">           sum_sum=valley[i<span class="number">-1</span>][(n<span class="number">-1</span>)&amp;<span class="number">1</span>]%p;</span><br><span class="line">           summit[i][n&amp;<span class="number">1</span>]=(summit[i<span class="number">-1</span>][n&amp;<span class="number">1</span>]+sum_sum)%p;</span><br><span class="line">       &#125;</span><br><span class="line">    ans=(valley[sum][sum&amp;<span class="number">1</span>]+summit[sum][sum&amp;<span class="number">1</span>])%p;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -640,7 +640,7 @@
   <p><span>本文标题:</span><a href="/2019/02/15/[题解]luoguP2467/">【题解】 [SDOI2010]地精部落 线性DP luogu2467</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Qiuly 的个人博客">Qiuly</a></p>
   <p><span>发布时间:</span>2019年02月15日 - 00:00</p>
-  <p><span>最后更新:</span>2019年04月23日 - 14:29</p>
+  <p><span>最后更新:</span>2019年05月07日 - 09:59</p>
   <p><span>原始链接:</span><a href="/2019/02/15/[题解]luoguP2467/" title="【题解】 [SDOI2010]地精部落 线性DP luogu2467">http://qiulyblog.github.io/2019/02/15/[题解]luoguP2467/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://qiulyblog.github.io/2019/02/15/[题解]luoguP2467/" aria-label="复制成功！"></i></span>
   </p>
@@ -705,8 +705,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/15/[题解]luoguP3403/" rel="prev" title="【题解】 跳楼机 同余最短路 luogu3403">
-                【题解】 跳楼机 同余最短路 luogu3403 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/15/[题解]luoguP3355/" rel="prev" title="【题解】 「网络流24题」骑士共存问题 网络流 luoguP3355">
+                【题解】 「网络流24题」骑士共存问题 网络流 luoguP3355 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -785,7 +785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">96</span>
+                    <span class="site-state-item-count">97</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1028,7 +1028,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#sum-i-1-n-summit-i-n-valley-i-n"><span class="nav-number">1.</span> <span class="nav-text">$\sum_{i=1}^{n} summit[i][n]+valley[i][n]$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summit-i-n-sum-k-1-i-1-valley-k-n-1"><span class="nav-number">2.</span> <span class="nav-text">$summit[i][n] = \sum_{k=1}^{i-1} valley[k][n-1]$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valley-i-n-sum-k-i-n-1-summit-k-n-1"><span class="nav-number">3.</span> <span class="nav-text">$valley[i][n] = \sum_{k=i}^{n-1} summit[k][n-1]$</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#那就使用滚动数组！"><span class="nav-number">3.1.</span> <span class="nav-text">那就使用滚动数组！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前缀和就好了呀！"><span class="nav-number">3.2.</span> <span class="nav-text">前缀和就好了呀！</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code:</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#那就使用滚动数组！"><span class="nav-number">1.</span> <span class="nav-text">那就使用滚动数组！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前缀和就好了呀！"><span class="nav-number">2.</span> <span class="nav-text">前缀和就好了呀！</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code:</span></a></li></div>
             
 
           </div>
@@ -1081,7 +1081,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共111.7k字</span>
+  <span class="post-count">博客全站共112.3k字</span>
 </div>
         
 
@@ -1638,7 +1638,24 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style>
+</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
     
   
@@ -1664,22 +1681,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
